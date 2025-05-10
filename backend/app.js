@@ -11,7 +11,7 @@ const postRoutes = require('./routes/postRoutes');
 const app = express();
 
 //  CORS有効化とJSONパースは最初に設定
-app.use(cors());
+app.use(cors({ origin: true }));
 app.use(express.json());
 
 //  レートリミッター：1時間に1回だけ登録可能（IP単位）
